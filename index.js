@@ -1,3 +1,7 @@
+const express = require('express')
+const app = express()
+const port = 3000
+
 const TelegramBot = require('node-telegram-bot-api');
 const schedule = require('node-schedule');
 require('dotenv').config();
@@ -72,5 +76,8 @@ bot.on('message', (msg) => {
     }
   }
 });
+console.log('Bot is running...');
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
-console.log('Bot Telegram đang chạy...');
