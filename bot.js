@@ -45,7 +45,7 @@ async function updateGroupTitle() {
 }
 
 // Lên lịch đổi tên hằng ngày
-schedule.scheduleJob('2 * * * * *', () => {
+schedule.scheduleJob('0 0 * * *', () => {
   updateGroupTitle();
   console.log('Đổi tên nhóm lúc 00:00 mỗi ngày');
 });
