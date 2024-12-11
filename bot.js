@@ -16,6 +16,12 @@ bot.on('message', (msg) => {
   console.log(`Chat ID: ${chatId}`); // In ID của nhóm ra console
   // bot.sendMessage(chatId, `Chat ID: ${chatId}`);
 });
+// Đăng ký các lệnh với Telegram
+bot.setMyCommands([
+  { command: '/start', description: 'Bắt đầu trò chuyện với bot' },
+  { command: '/daysleft', description: 'Tính số ngày còn lại đến Tết' },
+]);
+
 // Hàm tính toán số ngày còn lại
 function calculateDaysLeft() {
   const today = new Date();
